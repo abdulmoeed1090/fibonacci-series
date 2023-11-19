@@ -3,22 +3,31 @@
 using namespace std;
 
 // fibonacci series printing function
-void fibonacci(int number, int first = 0, int second = 1, int next = 0)
+void fibonacci(int number, int first = 1, int second = 1, int next = 0)
 {
+
     for (int i = 1; i <= number; i++)
     {
-        cout << first << endl;
-        next = first + second;
-        first = second;
-        second = next;
+        int last = first;
+        int prev = second;
+        for (int row = 1; row <= i; row++)
+        {
+            cout << last << "   ";
+            int temp = last;
+            last = prev;
+            prev+=temp;
+        }
+        cout << endl;
     }
 }
 
 // main function
 int main()
 {
-    int number, first = 0, second = 1, next = 0;
+    int number, first = 0, second = 1, next = 0, limit;
     cout << "Enter the number of terms of fibonacci series you want to display:";
     cin >> number;
     fibonacci(number);
+
+    return 0;
 }
