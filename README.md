@@ -1,2 +1,2 @@
 # fibonacci-series
-C++ program to display Fibonacci series 
+C++ program to display the Fibonacci series 
